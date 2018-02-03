@@ -13,7 +13,10 @@ print(train_df.columns.values, '\n')
 
 desc_pClass = train_df[["Pclass", "Survived"]].groupby(['Pclass'], as_index=False).mean().sort_values(by='Survived', ascending=False)
 desc_Sex = train_df[["Sex", "Survived"]].groupby((['Sex']), as_index=False).mean().sort_values(by='Survived', ascending=False)
+desc_SibSp = train_df[["SibSp", "Survived"]].groupby((['SibSp']), as_index=False).mean().sort_values(by='Survived', ascending=False)
+desc_Parch = train_df[["Parch", "Survived"]].groupby((['Parch']), as_index=False).mean().sort_values(by='Survived', ascending=False)
 
 print(desc_pClass, '\n')
-print(desc_Sex)
-
+print(desc_Sex, '\n')
+print(desc_SibSp, '\n')
+print(desc_Parch, '\n')
